@@ -24,7 +24,7 @@ import Foundation
 let userName = "StepChallenger"
 let searchName = "step"
 if userName.lowercased().contains(searchName.lowercased()) {
-    print("I found it")
+    print("I found it test")
 } else {
     print("I cannot find the username")
 }
