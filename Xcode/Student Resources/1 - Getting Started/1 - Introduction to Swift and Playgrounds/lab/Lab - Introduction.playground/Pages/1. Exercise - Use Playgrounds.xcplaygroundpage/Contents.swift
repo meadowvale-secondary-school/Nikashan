@@ -6,7 +6,7 @@
 print("I have learned the following:")
 print("What features make Swift a modern and safe language")
 print("How to use the Swift REPL in Terminal")
-print("How to use playgrounds to make writing Swift fun and simple")
+print("How to use playgrounds to make writing Swift fun and simple and this is a test")
 /*:
  Now print your own phrases to the console. Pick one of your favorite songs. Use your knowledge of the `print` function to display the song title and artist.
  */
