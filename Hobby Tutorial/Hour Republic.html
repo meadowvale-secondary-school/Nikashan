@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)https://hourrepublic.com/en/student/coop_hours/create/44993 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Hour Republic</title>
+
+<!-- Required meta tags always come first -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+<!-- Stylesheets -->
+<link rel="stylesheet" href="./Hour Republic_files/all.min.css">
+<link rel="stylesheet" href="./Hour Republic_files/bootstrap.min.css">
+<link rel="stylesheet" href="./Hour Republic_files/jquery.timepicker.css">
+
+<!-- Favicon -->
+<link rel="shortcut icon" type="image" href="https://hourrepublic.com/img/favicon.ico">
+
+<!-- Scripts -->
+<script type="text/javascript" async="" src="./Hour Republic_files/recaptcha__en.js"></script><script src="./Hour Republic_files/api.js"></script>
+</head>
+<body>
+    <!-- Scripts -->
+<script src="./Hour Republic_files/jquery.min.js"></script>
+<script src="./Hour Republic_files/tether.min.js"></script>
+<script src="./Hour Republic_files/jquery-ui.js"></script>
+<script src="./Hour Republic_files/bootstrap.min.js"></script>
+<script src="./Hour Republic_files/jquery.timepicker.min.js"></script>
+<script src="./Hour Republic_files/moment-with-locales.min.js"></script>
+<script src="./Hour Republic_files/ajax.js"></script>
+<script src="./Hour Republic_files/bootstrap-ui.js"></script>
+<script src="./Hour Republic_files/checkboxes.js"></script>
+<script src="./Hour Republic_files/modal.js"></script>
+<script src="./Hour Republic_files/post-encoded.js"></script>
+<script src="./Hour Republic_files/table.js"></script>
+
+<script type="text/javascript">
+    var _langCode = "en";
+
+    moment.locale(_langCode);
+</script>
+
+    <!-- Render the navigation -->
+    <div class="container">
+        <div class="header">
+            <div class="header-brand">
+                <a href="https://hourrepublic.com/en/student">
+                    <img src="./Hour Republic_files/hrlogo.png" alt="Hour Republic" style="width: 200px;">
+                </a>
+            </div>
+                            <div class="header-nav">
+                    <ul class="nav">
+                <li class="nav-item">
+            <a href="https://hourrepublic.com/en/student/dashboard/shsm/progress" class="nav-link ">SHSM</a></li>
+                <li class="nav-item">
+            <a href="https://hourrepublic.com/en/student/coop_hours/student/44993" class="nav-link active">Placement</a></li>
+                <li class="nav-item">
+            <a href="https://hourrepublic.com/en/student/volunteer_hours/student/44993" class="nav-link ">Volunteer</a></li>
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="https://hourrepublic.com/en/student/coop_hours/create/44993#" role="button" aria-haspopup="true" aria-expanded="false">
+            Nikashan Thavaruban            <span class="badge">1</span>
+        </a>
+        <div class="dropdown-menu">
+            <a class="dropdown-item" href="https://hourrepublic.com/en/student/inbox">
+                Messages                <span class="badge">1</span>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="https://hourrepublic.com/en/student/settings">Settings</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="https://hourrepublic.com/en/authenticate/logout">
+                Log out</a>
+        </div>
+    </li>
+</ul>
+                </div>
+                    </div>
+    </div>
+
+    <!-- Render the contents -->
+            <div class="container">
+            <div id="contents" class="page">
+                
+
+                
+<h1>Update Placement Hours</h1>
+<p>Record your placement details here. Save as you go, or submit it to your employer for verification.</p>
+
+<form action="https://hourrepublic.com/en/student/coop_hours/insert/44993" method="POST">
+    
+<!-- Styles -->
+<style type="text/css">
+.btn-file {
+  background: transparent;
+  color: #333;
+  border: none;
+  font-weight: bold;
+}
+
+.btn-file:hover {
+  background: transparent;
+}
+.btn-file.btn-primary:hover {
+  color: #333;
+}
+.btn-file.btn-primary:focus,
+.btn-file.btn-primary:active {
+  background: transparent;
+  opacity: 0.8;
+  color: inherit;
+}
+
+.btn-file i {
+  color: red;
+}
+
+.btn-file span.browse {
+  padding-left: 15px;
+  color: blue;
+  font-weight: 500;
+}
+
+.kv-upload-progress .progress-bar.progress-bar-success {
+  display: none;
+}
+</style>
+
+<div class="form-inline">
+    <fieldset class="form-group">
+        <label>Employer</label>:
+        <select class="form-control" id="employers">
+    <option value="-1">Choose...</option>
+            <option value="0" data-company="Meadowvale Secondary School" data-email="p0032691@pdsb.net" data-phone="9058241790" data-contact="Jason Pavelich" data-ext="455">
+            Meadowvale Secondary School - Jason Pavelich        </option>
+            <option value="74259" data-company="Apple" data-email="jbyung@gmail.com" data-phone="6479708999" data-contact="Jean Bernard Yung Hing Hin" data-ext="">
+            Apple - Jean Bernard Yung Hing Hin        </option>
+    </select>
+    </fieldset>
+    <fieldset class="form-group pull-xl-right">
+        <label>Preset Schedule</label>:
+        <select class="form-control" id="presets">
+    <option value="-1">Choose...</option>
+    </select>
+        <button type="button" class="btn btn-primary" data-modal="#confirm-preset-save" id="preset-save" data-save-preset-url="https://hourrepublic.com/en/student/coop_hours/save_preset/44993">
+            Save Preset</button>
+        <button type="button" class="btn btn-danger" data-modal="#confirm-preset-delete" id="preset-delete" data-delete-preset-url="https://hourrepublic.com/en/student/coop_hours/delete_preset/44993">
+            Delete</button>
+    </fieldset>
+</div>
+
+<hr>
+
+<fieldset class="form-group ">
+    <label for="company-input">Company Name</label>    <input class="form-control" id="company-input" type="text" name="company" value="Meadowvale Secondary School" placeholder="Company Name">
+</fieldset>
+
+<fieldset class="form-group ">
+    <label for="contact-input">Supervisor</label>    <input class="form-control" id="contact-input" type="text" name="contact" value="Jason Pavelich" placeholder="Supervisor">
+</fieldset>
+
+<fieldset class="form-group ">
+    <label for="email-input">Email</label>    <input class="form-control" id="email-input" type="text" name="email" value="p0032691@pdsb.net" placeholder="Email">
+</fieldset>
+
+<fieldset class="form-group ">
+    <label for="phone-input">Phone</label>    <div class="form-inline">
+        <input class="form-control" id="phone-input" type="text" name="phone" value="9058241790" placeholder="Phone">
+        <label for="phone-ext-input" class="sr-only">Ext</label>        <input class="form-control" id="phone-ext-input" type="text" name="phone_ext" value="455" placeholder="Ext" size="5">
+    </div>
+</fieldset>
+
+<fieldset class="form-group ">
+    <label for="description-input">Overall Description / New Learning for This Week</label>    <textarea class="form-control" id="description-input" name="description" rows="8" placeholder="Overall Description / New Learning for This Week"></textarea>
+</fieldset>
+
+<fieldset class="form-group ">
+    <label for="learned-input">Skills Learned</label>    <input class="form-control has-autocomplete ui-autocomplete-input" id="learned-input" data-options="Computers and technology, Customer service, Data analysis, Decision making, Documentation, Entrepreneurship, Initiative, Leadership, Numeracy, Observation, Oral communication, Organizational skills, Planning, Problem solving, Reading, Reliability, Self-advocacy, Team work, Using tools, Working independently, Working safely, Writing" type="text" name="learned" value="" placeholder="Skills Learned" autocomplete="off">
+</fieldset>
+
+<fieldset class="form-group ">
+    <label for="start-date-input">Work Week (starting on)</label>    <div class="form-inline">
+        <input class="form-control has-datepicker weekpicker shift-week hasDatepicker" id="start-date-input" type="text" name="start_date" value="2019-04-15" placeholder="Work Week (starting on)">
+   </div>
+</fieldset>
+
+<table class="table table-sm-stacked table-md-fixed" data-shift-template="https://hourrepublic.com/en/student/coop_hours/shift_row_template">
+    <thead>
+        <tr>
+            <th class="td-xl">Type</th>
+            <th class="td-md">Start</th>
+            <th class="td-md">
+              Lunch/Break              <span data-toggle="tooltip" data-placement="top" title="" data-original-title="Lunch hours (recorded in minutes) are deducted from total hours"><i class="fa fa-info-circle" aria-hidden="true"></i></span>
+            </th>
+            <th class="td-md">End</th>
+            <th class="text-md-center">Hours</th>
+            <th class="text-md-center">Absent</th>
+            <th class="text-md-center">Late</th>
+            <th></th>        </tr>
+    </thead>
+    <tbody>
+            <tr data-shift-day="1">
+            <th colspan="7" class="shift-date">Monday, April 1, 2019</th>
+                        <th class="text-md-right">
+                <a href="https://hourrepublic.com/en/student/coop_hours/create/44993#" class="add-shift"><span class="fa fa-plus"></span></a>
+            </th>
+                    </tr><tr class="shift-row" data-shift-index="0">
+    <td>
+            <select name="shifts[1][0][type]" class="form-control shift-type">
+<option value="Co-op Placement (Unpaid)">Placement (Unpaid)</option>
+<option value="Co-op Placement (Paid)">Placement (Paid)</option>
+<option value="In-School / Integration Day">In-School / Integration Day</option>
+<option value="Pre-Placement">Pre-Placement</option>
+<option value="Dual Credit">Dual Credit</option>
+</select>        </td>
+    <td><input class="form-control timepicker shift-start ui-timepicker-input" type="text" name="shifts[1][0][start]" value="9:00am" placeholder="Start" autocomplete="off"></td>
+    <td><input class="form-control shift-lunch" type="text" name="shifts[1][0][lunch]" value="" placeholder="Lunch"></td>
+    <td><input class="form-control timepicker shift-end ui-timepicker-input" type="text" name="shifts[1][0][end]" value="5:00pm" placeholder="End" autocomplete="off"></td>
+    <td class="text-md-center valign"><span class="align-middle shift-hours">2.25</span></td>
+    <td class="text-md-center valign">
+        <label class="icon-checkbox">
+                        <input class="form-control shift-absent" type="checkbox" name="shifts[1][0][absent]" value="1" placeholder="Absent">
+            <span class="fa"></span>
+        </label>
+    </td>
+    <td class="text-md-center valign">
+        <label class="icon-checkbox">
+                        <input class="form-control shift-late" type="checkbox" name="shifts[1][0][late]" value="1" placeholder="Late">
+            <span class="fa"></span>
+        </label>
+    </td>
+        <td class="text-md-right valign">
+        <a class="delete-shift" href="https://hourrepublic.com/en/student/coop_hours/create/44993#">Delete</a>
+    </td>
+    </tr>
+
+<tr data-shift-index="0">
+    <td colspan="8">
+        <fieldset class="form-group">
+            <textarea class="form-control shift-description" name="shifts[1][0][description]" rows="3" placeholder="Description"></textarea>
+        </fieldset>
+    </td>
+</tr>
+                    <tr data-shift-day="2">
+            <th colspan="7" class="shift-date">Tuesday, April 2, 2019</th>
+                        <th class="text-md-right">
+                <a href="https://hourrepublic.com/en/student/coop_hours/create/44993#" class="add-shift"><span class="fa fa-plus"></span></a>
+            </th>
+                    </tr><tr class="shift-row" data-shift-index="1">
+    <td>
+            <select name="shifts[2][1][type]" class="form-control shift-type">
+<option value="Co-op Placement (Unpaid)">Placement (Unpaid)</option>
+<option value="Co-op Placement (Paid)">Placement (Paid)</option>
+<option value="In-School / Integration Day">In-School / Integration Day</option>
+<option value="Pre-Placement">Pre-Placement</option>
+<option value="Dual Credit">Dual Credit</option>
+</select>        </td>
+    <td><input class="form-control timepicker shift-start ui-timepicker-input" type="text" name="shifts[2][1][start]" value="9:00am" placeholder="Start" autocomplete="off"></td>
+    <td><input class="form-control shift-lunch" type="text" name="shifts[2][1][lunch]" value="" placeholder="Lunch"></td>
+    <td><input class="form-control timepicker shift-end ui-timepicker-input" type="text" name="shifts[2][1][end]" value="5:00pm" placeholder="End" autocomplete="off"></td>
+    <td class="text-md-center valign"><span class="align-middle shift-hours">2.67</span></td>
+    <td class="text-md-center valign">
+        <label class="icon-checkbox">
+                        <input class="form-control shift-absent" type="checkbox" name="shifts[2][1][absent]" value="1" placeholder="Absent">
+            <span class="fa"></span>
+        </label>
+    </td>
+    <td class="text-md-center valign">
+        <label class="icon-checkbox">
+                        <input class="form-control shift-late" type="checkbox" name="shifts[2][1][late]" value="1" placeholder="Late">
+            <span class="fa"></span>
+        </label>
+    </td>
+        <td class="text-md-right valign">
+        <a class="delete-shift" href="https://hourrepublic.com/en/student/coop_hours/create/44993#">Delete</a>
+    </td>
+    </tr>
+
+<tr data-shift-index="1">
+    <td colspan="8">
+        <fieldset class="form-group">
+            <textarea class="form-control shift-description" name="shifts[2][1][description]" rows="3" placeholder="Description"></textarea>
+        </fieldset>
+    </td>
+</tr>
+                    <tr data-shift-day="3">
+            <th colspan="7" class="shift-date">Wednesday, April 3, 2019</th>
+                        <th class="text-md-right">
+                <a href="https://hourrepublic.com/en/student/coop_hours/create/44993#" class="add-shift"><span class="fa fa-plus"></span></a>
+            </th>
+                    </tr><tr class="shift-row" data-shift-index="2">
+    <td>
+            <select name="shifts[3][2][type]" class="form-control shift-type">
+<option value="Co-op Placement (Unpaid)">Placement (Unpaid)</option>
+<option value="Co-op Placement (Paid)">Placement (Paid)</option>
+<option value="In-School / Integration Day">In-School / Integration Day</option>
+<option value="Pre-Placement">Pre-Placement</option>
+<option value="Dual Credit">Dual Credit</option>
+</select>        </td>
+    <td><input class="form-control timepicker shift-start ui-timepicker-input" type="text" name="shifts[3][2][start]" value="9:00am" placeholder="Start" autocomplete="off"></td>
+    <td><input class="form-control shift-lunch" type="text" name="shifts[3][2][lunch]" value="" placeholder="Lunch"></td>
+    <td><input class="form-control timepicker shift-end ui-timepicker-input" type="text" name="shifts[3][2][end]" value="5:00pm" placeholder="End" autocomplete="off"></td>
+    <td class="text-md-center valign"><span class="align-middle shift-hours">2.67</span></td>
+    <td class="text-md-center valign">
+        <label class="icon-checkbox">
+                        <input class="form-control shift-absent" type="checkbox" name="shifts[3][2][absent]" value="1" placeholder="Absent">
+            <span class="fa"></span>
+        </label>
+    </td>
+    <td class="text-md-center valign">
+        <label class="icon-checkbox">
+                        <input class="form-control shift-late" type="checkbox" name="shifts[3][2][late]" value="1" placeholder="Late">
+            <span class="fa"></span>
+        </label>
+    </td>
+        <td class="text-md-right valign">
+        <a class="delete-shift" href="https://hourrepublic.com/en/student/coop_hours/create/44993#">Delete</a>
+    </td>
+    </tr>
+
+<tr data-shift-index="2">
+    <td colspan="8">
+        <fieldset class="form-group">
+            <textarea class="form-control shift-description" name="shifts[3][2][description]" rows="3" placeholder="Description"></textarea>
+        </fieldset>
+    </td>
+</tr>
+                    <tr data-shift-day="4">
+            <th colspan="7" class="shift-date">Thursday, April 4, 2019</th>
+                        <th class="text-md-right">
+                <a href="https://hourrepublic.com/en/student/coop_hours/create/44993#" class="add-shift"><span class="fa fa-plus"></span></a>
+            </th>
+                    </tr>
+                    <tr data-shift-day="5">
+            <th colspan="7" class="shift-date">Friday, April 5, 2019</th>
+                        <th class="text-md-right">
+                <a href="https://hourrepublic.com/en/student/coop_hours/create/44993#" class="add-shift"><span class="fa fa-plus"></span></a>
+            </th>
+                    </tr>
+                    <tr data-shift-day="6">
+            <th colspan="7" class="shift-date">Saturday, April 6, 2019</th>
+                        <th class="text-md-right">
+                <a href="https://hourrepublic.com/en/student/coop_hours/create/44993#" class="add-shift"><span class="fa fa-plus"></span></a>
+            </th>
+                    </tr>
+                    <tr data-shift-day="7">
+            <th colspan="7" class="shift-date">Sunday, April 7, 2019</th>
+                        <th class="text-md-right">
+                <a href="https://hourrepublic.com/en/student/coop_hours/create/44993#" class="add-shift"><span class="fa fa-plus"></span></a>
+            </th>
+                    </tr>
+                </tbody>
+    <tfoot>
+        <tr>
+            <th colspan="7">
+                <div class="form-inline">
+                    <b>Total Hours:</b> <span class="hours-total">7.58</span>                                    </div>
+            </th>
+            <th class="text-md-right"><span class="shift-count">3</span> shifts</th>
+        </tr>
+    </tfoot>
+</table>
+
+<fieldset class="form-group fallback ">
+    <label for="upload">Uploads</label>    <div class="form-inline">
+        <div class="file-input file-input-new"><div class="file-preview ">
+    <button type="button" class="close fileinput-remove" aria-label="Close">
+  <span aria-hidden="true">×</span>
+</button>    <div class="file-drop-disabled">
+    <div class="file-preview-thumbnails">
+    </div>
+    <div class="clearfix"></div>    <div class="file-preview-status text-center text-success"></div>
+    <div class="kv-fileinput-error file-error-message" style="display: none;"></div>
+    </div>
+</div>
+<div class="kv-upload-progress kv-hidden" style="display: none;"><div class="progress">
+    <div class="progress-bar bg-success progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%;">
+        0%
+     </div>
+</div></div>
+<div class="clearfix"></div>
+<button type="button" tabindex="500" title="Clear selected files" class="btn btn-default btn-secondary fileinput-remove fileinput-remove-button"><i class="glyphicon glyphicon-trash"></i>  <span class="hidden-xs">Remove</span></button>
+<button type="button" tabindex="500" title="Abort ongoing upload" class="btn btn-default btn-secondary kv-hidden fileinput-cancel fileinput-cancel-button"><i class="glyphicon glyphicon-ban-circle"></i>  <span class="hidden-xs">Cancel</span></button>
+
+<div tabindex="500" class="btn btn-primary btn-file"><i class="fa fa-paperclip" aria-hidden="true"></i>&nbsp;  <span class="hidden-xs">Attachments <span class="browse">Browse</span></span><input type="file" name="upload[]" value="" class="form-control" multiple="" id="upload"></div>
+</div>    </div>
+</fieldset>
+
+
+
+<script src="./Hour Republic_files/form-init.js"></script>
+<script src="./Hour Republic_files/coop-hours.js"></script>
+<script src="./Hour Republic_files/popper.min.js"></script>
+<script src="./Hour Republic_files/fileinput.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#upload").fileinput({
+      uploadUrl: $('#upload').parents('form').attr('action'),
+      showRemove: true,
+      showCaption: false,
+      showUpload: false,
+      dropZoneEnabled: false,
+      browseLabel: 'Attachments <span class="browse">Browse</span>',
+      browseIcon: '<i class="fa fa-paperclip" aria-hidden="true"></i>&nbsp;',
+      maxFileSize: 0
+    });
+
+    $('#upload').on('fileselect', function(event, numFiles, label) {
+      var fileStack = $('#upload').fileinput('getFileStack');
+      if (numFiles == fileStack.length) {
+        for (i=1; i<=numFiles; i++) {
+          console.log(numFiles);
+          $('#upload').fileinput('upload');
+        }
+      }
+    });
+})
+</script>
+<link href="./Hour Republic_files/fileinput.min.css" media="all" rel="stylesheet" type="text/css">
+    <fieldset class="form-footer m-b-1">
+    <button type="button" class="btn btn-secondary" data-action="save" data-modal="#confirm-save">
+    Save</button>
+    <button type="button" class="btn btn-primary" data-action="submit" data-modal="#confirm-submit">
+        Save and Submit</button>
+    </fieldset>
+</form>
+            </div>
+        </div>
+    
+    <!-- Render the footer -->
+    <div class="container">
+        <div class="footer">
+    <div class="footer-item">
+        <a href="http://facebook.com/charityrepublic" target="_blank">
+            <span class="icon-round fab fa-facebook" aria-label="shared.footer.facebook-square"></span></a></div>
+    <div class="footer-item">
+        <a href="http://twitter.com/charityrepublic" target="_blank">
+            <span class="icon-round fab fa-twitter" aria-label="shared.footer.twitter-square"></span></a></div>
+    <div class="footer-item">
+        <a href="https://hourrepublic.com/home/about" target="_blank">
+            About</a></div>
+    <div class="footer-item">
+        <a href="https://hourrepublic.com/en/content/privacy" target="_blank">
+            Privacy</a></div>
+    <div class="footer-item">
+        <a href="https://hourrepublic.com/en/content/agreement" target="_blank">
+            User Agreement</a></div>
+    <div class="footer-item">
+        <a href="https://hourrepublic.com/home/contact" target="_blank">
+            Contact</a></div>
+    <div class="footer-item">
+        <a href="https://blog.charityrepublic.com/" target="_blank">
+            Blog</a></div>
+
+            <div class="footer-item">
+            <a href="https://faqs.hourrepublic.com/" target="_blank">
+                FAQs</a></div>
+    
+            <div class="footer-item">
+            <a href="https://hourrepublic.com/fr/student/coop_hours/create/44993">Français</a></div>
+    </div>
+    </div>
+
+    <!-- Render the closure -->
+            <div class="modal fade" id="confirm-submit" role="dialog" tabindex="-1">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Save and Submit</h4>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to save and submit these hours?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-confirm="modal">Confirm</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="confirm-save" role="dialog" tabindex="-1">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Save</h4>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to save these hours?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-confirm="modal">Confirm</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="confirm-delete" role="dialog" tabindex="-1">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Delete Hours</h4>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to delete these hours?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-confirm="modal">Confirm</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="confirm-resend-company" role="dialog" tabindex="-1">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Save &amp; Resend Company</h4>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to save these hours and resend them to your company?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-confirm="modal">Confirm</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="confirm-preset-save" role="dialog" tabindex="-1">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Save Preset</h4>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to save this schedule as a new preset?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-confirm="modal">Confirm</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="confirm-preset-delete" role="dialog" tabindex="-1">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Delete Preset</h4>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to delete this preset?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-confirm="modal">Confirm</button>
+            </div>
+        </div>
+    </div>
+</div>
+    
+
+
+<ul id="ui-id-1" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" style="display: none;"></ul><div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" style="position: absolute; top: 1015.41px; left: 118px; z-index: 1; display: none;"><div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all"><a class="ui-datepicker-prev ui-corner-all" data-handler="prev" data-event="click" title="&lt;span class=&quot;fa fa-chevron-left&quot;&gt;"><span class="ui-icon ui-icon-circle-triangle-w"><span class="fa fa-chevron-left"></span></span></a><a class="ui-datepicker-next ui-corner-all" data-handler="next" data-event="click" title="&lt;span class=&quot;fa fa-chevron-right&quot;&gt;"><span class="ui-icon ui-icon-circle-triangle-e"><span class="fa fa-chevron-right"></span></span></a><div class="ui-datepicker-title"><span class="ui-datepicker-month">April</span>&nbsp;<span class="ui-datepicker-year">2019</span></div></div><table class="ui-datepicker-calendar"><thead><tr><th scope="col"><span title="Monday">Mo</span></th><th scope="col"><span title="Tuesday">Tu</span></th><th scope="col"><span title="Wednesday">We</span></th><th scope="col"><span title="Thursday">Th</span></th><th scope="col"><span title="Friday">Fr</span></th><th scope="col" class="ui-datepicker-week-end"><span title="Saturday">Sa</span></th><th scope="col" class="ui-datepicker-week-end"><span title="Sunday">Su</span></th></tr></thead><tbody><tr><td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2019"><a class="ui-state-default" href="https://hourrepublic.com/en/student/coop_hours/create/44993#">1</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2019"><a class="ui-state-default" href="https://hourrepublic.com/en/student/coop_hours/create/44993#">2</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2019"><a class="ui-state-default" href="https://hourrepublic.com/en/student/coop_hours/create/44993#">3</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2019"><a class="ui-state-default" href="https://hourrepublic.com/en/student/coop_hours/create/44993#">4</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2019"><a class="ui-state-default" href="https://hourrepublic.com/en/student/coop_hours/create/44993#">5</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="3" data-year="2019"><a class="ui-state-default" href="https://hourrepublic.com/en/student/coop_hours/create/44993#">6</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="3" data-year="2019"><a class="ui-state-default" href="https://hourrepublic.com/en/student/coop_hours/create/44993#">7</a></td></tr><tr><td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2019"><a class="ui-state-default" href="https://hourrepublic.com/en/student/coop_hours/create/44993#">8</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2019"><a class="ui-state-default" href="https://hourrepublic.com/en/student/coop_hours/create/44993#">9</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2019"><a class="ui-state-default" href="https://hourrepublic.com/en/student/coop_hours/create/44993#">10</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2019"><a class="ui-state-default" href="https://hourrepublic.com/en/student/coop_hours/create/44993#">11</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2019"><a class="ui-state-default" href="https://hourrepublic.com/en/student/coop_hours/create/44993#">12</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="3" data-year="2019"><a class="ui-state-default" href="https://hourrepublic.com/en/student/coop_hours/create/44993#">13</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="3" data-year="2019"><a class="ui-state-default" href="https://hourrepublic.com/en/student/coop_hours/create/44993#">14</a></td></tr><tr><td class="  ui-datepicker-current-day" data-handler="selectDay" data-event="click" data-month="3" data-year="2019"><a class="ui-state-default ui-state-active" href="https://hourrepublic.com/en/student/coop_hours/create/44993#">15</a></td><td class="  ui-datepicker-today" data-handler="selectDay" data-event="click" data-month="3" data-year="2019"><a class="ui-state-default ui-state-highlight" href="https://hourrepublic.com/en/student/coop_hours/create/44993#">16</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2019"><a class="ui-state-default" href="https://hourrepublic.com/en/student/coop_hours/create/44993#">17</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2019"><a class="ui-state-default" href="https://hourrepublic.com/en/student/coop_hours/create/44993#">18</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2019"><a class="ui-state-default" href="https://hourrepublic.com/en/student/coop_hours/create/44993#">19</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="3" data-year="2019"><a class="ui-state-default" href="https://hourrepublic.com/en/student/coop_hours/create/44993#">20</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="3" data-year="2019"><a class="ui-state-default" href="https://hourrepublic.com/en/student/coop_hours/create/44993#">21</a></td></tr><tr><td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2019"><a class="ui-state-default" href="https://hourrepublic.com/en/student/coop_hours/create/44993#">22</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2019"><a class="ui-state-default" href="https://hourrepublic.com/en/student/coop_hours/create/44993#">23</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2019"><a class="ui-state-default" href="https://hourrepublic.com/en/student/coop_hours/create/44993#">24</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2019"><a class="ui-state-default" href="https://hourrepublic.com/en/student/coop_hours/create/44993#">25</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2019"><a class="ui-state-default" href="https://hourrepublic.com/en/student/coop_hours/create/44993#">26</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="3" data-year="2019"><a class="ui-state-default" href="https://hourrepublic.com/en/student/coop_hours/create/44993#">27</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="3" data-year="2019"><a class="ui-state-default" href="https://hourrepublic.com/en/student/coop_hours/create/44993#">28</a></td></tr><tr><td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2019"><a class="ui-state-default" href="https://hourrepublic.com/en/student/coop_hours/create/44993#">29</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2019"><a class="ui-state-default" href="https://hourrepublic.com/en/student/coop_hours/create/44993#">30</a></td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td></tr></tbody></table></div><div id="kvFileinputModal" class="file-zoom-dialog modal fade" tabindex="-1" aria-labelledby="kvFileinputModalLabel"><div class="modal-dialog modal-lg" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title">Detailed Preview</h5>
+      <span class="kv-zoom-title"></span>
+      <div class="kv-zoom-actions"><button type="button" class="btn btn-sm btn-kv btn-default btn-outline-secondary btn-toggleheader" title="Toggle header" data-toggle="button" aria-pressed="false" autocomplete="off"><i class="glyphicon glyphicon-resize-vertical"></i></button><button type="button" class="btn btn-sm btn-kv btn-default btn-outline-secondary btn-fullscreen" title="Toggle full screen" data-toggle="button" aria-pressed="false" autocomplete="off"><i class="glyphicon glyphicon-fullscreen"></i></button><button type="button" class="btn btn-sm btn-kv btn-default btn-outline-secondary btn-borderless" title="Toggle borderless mode" data-toggle="button" aria-pressed="false" autocomplete="off"><i class="glyphicon glyphicon-resize-full"></i></button><button type="button" class="btn btn-sm btn-kv btn-default btn-outline-secondary btn-close" title="Close detailed preview" data-dismiss="modal" aria-hidden="true"><i class="glyphicon glyphicon-remove"></i></button></div>
+    </div>
+    <div class="modal-body">
+      <div class="floating-buttons"></div>
+      <div class="kv-zoom-body file-zoom-content krajee-default"></div>
+<button type="button" class="btn btn-navigate btn-prev" title="View previous file"><i class="glyphicon glyphicon-triangle-left"></i></button> <button type="button" class="btn btn-navigate btn-next" title="View next file"><i class="glyphicon glyphicon-triangle-right"></i></button>
+    </div>
+  </div>
+</div>
+</div><div class="ui-timepicker-wrapper" tabindex="-1" style="position: absolute; top: 1180.41px; left: 391px; display: none;"><ul class="ui-timepicker-list"><li class="ui-timepicker-am">12:00am</li><li class="ui-timepicker-am">12:15am</li><li class="ui-timepicker-am">12:30am</li><li class="ui-timepicker-am">12:45am</li><li class="ui-timepicker-am">1:00am</li><li class="ui-timepicker-am">1:15am</li><li class="ui-timepicker-am">1:30am</li><li class="ui-timepicker-am">1:45am</li><li class="ui-timepicker-am">2:00am</li><li class="ui-timepicker-am">2:15am</li><li class="ui-timepicker-am">2:30am</li><li class="ui-timepicker-am">2:45am</li><li class="ui-timepicker-am">3:00am</li><li class="ui-timepicker-am">3:15am</li><li class="ui-timepicker-am">3:30am</li><li class="ui-timepicker-am">3:45am</li><li class="ui-timepicker-am">4:00am</li><li class="ui-timepicker-am">4:15am</li><li class="ui-timepicker-am">4:30am</li><li class="ui-timepicker-am">4:45am</li><li class="ui-timepicker-am">5:00am</li><li class="ui-timepicker-am">5:15am</li><li class="ui-timepicker-am">5:30am</li><li class="ui-timepicker-am">5:45am</li><li class="ui-timepicker-am">6:00am</li><li class="ui-timepicker-am">6:15am</li><li class="ui-timepicker-am">6:30am</li><li class="ui-timepicker-am">6:45am</li><li class="ui-timepicker-am">7:00am</li><li class="ui-timepicker-am">7:15am</li><li class="ui-timepicker-am">7:30am</li><li class="ui-timepicker-am">7:45am</li><li class="ui-timepicker-am">8:00am</li><li class="ui-timepicker-am">8:15am</li><li class="ui-timepicker-am ui-timepicker-selected">8:30am</li><li class="ui-timepicker-am">8:45am</li><li class="ui-timepicker-am">9:00am</li><li class="ui-timepicker-am">9:15am</li><li class="ui-timepicker-am">9:30am</li><li class="ui-timepicker-am">9:45am</li><li class="ui-timepicker-am">10:00am</li><li class="ui-timepicker-am">10:15am</li><li class="ui-timepicker-am">10:30am</li><li class="ui-timepicker-am">10:45am</li><li class="ui-timepicker-am">11:00am</li><li class="ui-timepicker-am">11:15am</li><li class="ui-timepicker-am">11:30am</li><li class="ui-timepicker-am">11:45am</li><li class="ui-timepicker-pm">12:00pm</li><li class="ui-timepicker-pm">12:15pm</li><li class="ui-timepicker-pm">12:30pm</li><li class="ui-timepicker-pm">12:45pm</li><li class="ui-timepicker-pm">1:00pm</li><li class="ui-timepicker-pm">1:15pm</li><li class="ui-timepicker-pm">1:30pm</li><li class="ui-timepicker-pm">1:45pm</li><li class="ui-timepicker-pm">2:00pm</li><li class="ui-timepicker-pm">2:15pm</li><li class="ui-timepicker-pm">2:30pm</li><li class="ui-timepicker-pm">2:45pm</li><li class="ui-timepicker-pm">3:00pm</li><li class="ui-timepicker-pm">3:15pm</li><li class="ui-timepicker-pm">3:30pm</li><li class="ui-timepicker-pm">3:45pm</li><li class="ui-timepicker-pm">4:00pm</li><li class="ui-timepicker-pm">4:15pm</li><li class="ui-timepicker-pm">4:30pm</li><li class="ui-timepicker-pm">4:45pm</li><li class="ui-timepicker-pm">5:00pm</li><li class="ui-timepicker-pm">5:15pm</li><li class="ui-timepicker-pm">5:30pm</li><li class="ui-timepicker-pm">5:45pm</li><li class="ui-timepicker-pm">6:00pm</li><li class="ui-timepicker-pm">6:15pm</li><li class="ui-timepicker-pm">6:30pm</li><li class="ui-timepicker-pm">6:45pm</li><li class="ui-timepicker-pm">7:00pm</li><li class="ui-timepicker-pm">7:15pm</li><li class="ui-timepicker-pm">7:30pm</li><li class="ui-timepicker-pm">7:45pm</li><li class="ui-timepicker-pm">8:00pm</li><li class="ui-timepicker-pm">8:15pm</li><li class="ui-timepicker-pm">8:30pm</li><li class="ui-timepicker-pm">8:45pm</li><li class="ui-timepicker-pm">9:00pm</li><li class="ui-timepicker-pm">9:15pm</li><li class="ui-timepicker-pm">9:30pm</li><li class="ui-timepicker-pm">9:45pm</li><li class="ui-timepicker-pm">10:00pm</li><li class="ui-timepicker-pm">10:15pm</li><li class="ui-timepicker-pm">10:30pm</li><li class="ui-timepicker-pm">10:45pm</li><li class="ui-timepicker-pm">11:00pm</li><li class="ui-timepicker-pm">11:15pm</li><li class="ui-timepicker-pm">11:30pm</li><li class="ui-timepicker-pm">11:45pm</li></ul></div><div class="ui-timepicker-wrapper" tabindex="-1" style="position: absolute; top: 1413.41px; left: 391px; display: none;"><ul class="ui-timepicker-list"><li class="ui-timepicker-am">12:00am</li><li class="ui-timepicker-am">12:15am</li><li class="ui-timepicker-am">12:30am</li><li class="ui-timepicker-am">12:45am</li><li class="ui-timepicker-am">1:00am</li><li class="ui-timepicker-am">1:15am</li><li class="ui-timepicker-am">1:30am</li><li class="ui-timepicker-am">1:45am</li><li class="ui-timepicker-am">2:00am</li><li class="ui-timepicker-am">2:15am</li><li class="ui-timepicker-am">2:30am</li><li class="ui-timepicker-am">2:45am</li><li class="ui-timepicker-am">3:00am</li><li class="ui-timepicker-am">3:15am</li><li class="ui-timepicker-am">3:30am</li><li class="ui-timepicker-am">3:45am</li><li class="ui-timepicker-am">4:00am</li><li class="ui-timepicker-am">4:15am</li><li class="ui-timepicker-am">4:30am</li><li class="ui-timepicker-am">4:45am</li><li class="ui-timepicker-am">5:00am</li><li class="ui-timepicker-am">5:15am</li><li class="ui-timepicker-am">5:30am</li><li class="ui-timepicker-am">5:45am</li><li class="ui-timepicker-am">6:00am</li><li class="ui-timepicker-am">6:15am</li><li class="ui-timepicker-am">6:30am</li><li class="ui-timepicker-am">6:45am</li><li class="ui-timepicker-am">7:00am</li><li class="ui-timepicker-am">7:15am</li><li class="ui-timepicker-am">7:30am</li><li class="ui-timepicker-am">7:45am</li><li class="ui-timepicker-am">8:00am</li><li class="ui-timepicker-am">8:15am</li><li class="ui-timepicker-am ui-timepicker-selected">8:30am</li><li class="ui-timepicker-am">8:45am</li><li class="ui-timepicker-am">9:00am</li><li class="ui-timepicker-am">9:15am</li><li class="ui-timepicker-am">9:30am</li><li class="ui-timepicker-am">9:45am</li><li class="ui-timepicker-am">10:00am</li><li class="ui-timepicker-am">10:15am</li><li class="ui-timepicker-am">10:30am</li><li class="ui-timepicker-am">10:45am</li><li class="ui-timepicker-am">11:00am</li><li class="ui-timepicker-am">11:15am</li><li class="ui-timepicker-am">11:30am</li><li class="ui-timepicker-am">11:45am</li><li class="ui-timepicker-pm">12:00pm</li><li class="ui-timepicker-pm">12:15pm</li><li class="ui-timepicker-pm">12:30pm</li><li class="ui-timepicker-pm">12:45pm</li><li class="ui-timepicker-pm">1:00pm</li><li class="ui-timepicker-pm">1:15pm</li><li class="ui-timepicker-pm">1:30pm</li><li class="ui-timepicker-pm">1:45pm</li><li class="ui-timepicker-pm">2:00pm</li><li class="ui-timepicker-pm">2:15pm</li><li class="ui-timepicker-pm">2:30pm</li><li class="ui-timepicker-pm">2:45pm</li><li class="ui-timepicker-pm">3:00pm</li><li class="ui-timepicker-pm">3:15pm</li><li class="ui-timepicker-pm">3:30pm</li><li class="ui-timepicker-pm">3:45pm</li><li class="ui-timepicker-pm">4:00pm</li><li class="ui-timepicker-pm">4:15pm</li><li class="ui-timepicker-pm">4:30pm</li><li class="ui-timepicker-pm">4:45pm</li><li class="ui-timepicker-pm">5:00pm</li><li class="ui-timepicker-pm">5:15pm</li><li class="ui-timepicker-pm">5:30pm</li><li class="ui-timepicker-pm">5:45pm</li><li class="ui-timepicker-pm">6:00pm</li><li class="ui-timepicker-pm">6:15pm</li><li class="ui-timepicker-pm">6:30pm</li><li class="ui-timepicker-pm">6:45pm</li><li class="ui-timepicker-pm">7:00pm</li><li class="ui-timepicker-pm">7:15pm</li><li class="ui-timepicker-pm">7:30pm</li><li class="ui-timepicker-pm">7:45pm</li><li class="ui-timepicker-pm">8:00pm</li><li class="ui-timepicker-pm">8:15pm</li><li class="ui-timepicker-pm">8:30pm</li><li class="ui-timepicker-pm">8:45pm</li><li class="ui-timepicker-pm">9:00pm</li><li class="ui-timepicker-pm">9:15pm</li><li class="ui-timepicker-pm">9:30pm</li><li class="ui-timepicker-pm">9:45pm</li><li class="ui-timepicker-pm">10:00pm</li><li class="ui-timepicker-pm">10:15pm</li><li class="ui-timepicker-pm">10:30pm</li><li class="ui-timepicker-pm">10:45pm</li><li class="ui-timepicker-pm">11:00pm</li><li class="ui-timepicker-pm">11:15pm</li><li class="ui-timepicker-pm">11:30pm</li><li class="ui-timepicker-pm">11:45pm</li></ul></div><div class="ui-timepicker-wrapper" tabindex="-1" style="position: absolute; top: 1646.41px; left: 391px; display: none;"><ul class="ui-timepicker-list"><li class="ui-timepicker-am">12:00am</li><li class="ui-timepicker-am">12:15am</li><li class="ui-timepicker-am">12:30am</li><li class="ui-timepicker-am">12:45am</li><li class="ui-timepicker-am">1:00am</li><li class="ui-timepicker-am">1:15am</li><li class="ui-timepicker-am">1:30am</li><li class="ui-timepicker-am">1:45am</li><li class="ui-timepicker-am">2:00am</li><li class="ui-timepicker-am">2:15am</li><li class="ui-timepicker-am">2:30am</li><li class="ui-timepicker-am">2:45am</li><li class="ui-timepicker-am">3:00am</li><li class="ui-timepicker-am">3:15am</li><li class="ui-timepicker-am">3:30am</li><li class="ui-timepicker-am">3:45am</li><li class="ui-timepicker-am">4:00am</li><li class="ui-timepicker-am">4:15am</li><li class="ui-timepicker-am">4:30am</li><li class="ui-timepicker-am">4:45am</li><li class="ui-timepicker-am">5:00am</li><li class="ui-timepicker-am">5:15am</li><li class="ui-timepicker-am">5:30am</li><li class="ui-timepicker-am">5:45am</li><li class="ui-timepicker-am">6:00am</li><li class="ui-timepicker-am">6:15am</li><li class="ui-timepicker-am">6:30am</li><li class="ui-timepicker-am">6:45am</li><li class="ui-timepicker-am">7:00am</li><li class="ui-timepicker-am">7:15am</li><li class="ui-timepicker-am">7:30am</li><li class="ui-timepicker-am">7:45am</li><li class="ui-timepicker-am">8:00am</li><li class="ui-timepicker-am">8:15am</li><li class="ui-timepicker-am ui-timepicker-selected">8:30am</li><li class="ui-timepicker-am">8:45am</li><li class="ui-timepicker-am">9:00am</li><li class="ui-timepicker-am">9:15am</li><li class="ui-timepicker-am">9:30am</li><li class="ui-timepicker-am">9:45am</li><li class="ui-timepicker-am">10:00am</li><li class="ui-timepicker-am">10:15am</li><li class="ui-timepicker-am">10:30am</li><li class="ui-timepicker-am">10:45am</li><li class="ui-timepicker-am">11:00am</li><li class="ui-timepicker-am">11:15am</li><li class="ui-timepicker-am">11:30am</li><li class="ui-timepicker-am">11:45am</li><li class="ui-timepicker-pm">12:00pm</li><li class="ui-timepicker-pm">12:15pm</li><li class="ui-timepicker-pm">12:30pm</li><li class="ui-timepicker-pm">12:45pm</li><li class="ui-timepicker-pm">1:00pm</li><li class="ui-timepicker-pm">1:15pm</li><li class="ui-timepicker-pm">1:30pm</li><li class="ui-timepicker-pm">1:45pm</li><li class="ui-timepicker-pm">2:00pm</li><li class="ui-timepicker-pm">2:15pm</li><li class="ui-timepicker-pm">2:30pm</li><li class="ui-timepicker-pm">2:45pm</li><li class="ui-timepicker-pm">3:00pm</li><li class="ui-timepicker-pm">3:15pm</li><li class="ui-timepicker-pm">3:30pm</li><li class="ui-timepicker-pm">3:45pm</li><li class="ui-timepicker-pm">4:00pm</li><li class="ui-timepicker-pm">4:15pm</li><li class="ui-timepicker-pm">4:30pm</li><li class="ui-timepicker-pm">4:45pm</li><li class="ui-timepicker-pm">5:00pm</li><li class="ui-timepicker-pm">5:15pm</li><li class="ui-timepicker-pm">5:30pm</li><li class="ui-timepicker-pm">5:45pm</li><li class="ui-timepicker-pm">6:00pm</li><li class="ui-timepicker-pm">6:15pm</li><li class="ui-timepicker-pm">6:30pm</li><li class="ui-timepicker-pm">6:45pm</li><li class="ui-timepicker-pm">7:00pm</li><li class="ui-timepicker-pm">7:15pm</li><li class="ui-timepicker-pm">7:30pm</li><li class="ui-timepicker-pm">7:45pm</li><li class="ui-timepicker-pm">8:00pm</li><li class="ui-timepicker-pm">8:15pm</li><li class="ui-timepicker-pm">8:30pm</li><li class="ui-timepicker-pm">8:45pm</li><li class="ui-timepicker-pm">9:00pm</li><li class="ui-timepicker-pm">9:15pm</li><li class="ui-timepicker-pm">9:30pm</li><li class="ui-timepicker-pm">9:45pm</li><li class="ui-timepicker-pm">10:00pm</li><li class="ui-timepicker-pm">10:15pm</li><li class="ui-timepicker-pm">10:30pm</li><li class="ui-timepicker-pm">10:45pm</li><li class="ui-timepicker-pm">11:00pm</li><li class="ui-timepicker-pm">11:15pm</li><li class="ui-timepicker-pm">11:30pm</li><li class="ui-timepicker-pm">11:45pm</li></ul></div></body></html>
